@@ -1,0 +1,33 @@
+POST http://localhost:3000/task HTTP/1.1
+content-type: application/json
+
+{
+    "title": "Sample task 5",
+    "description": "This is the test task 5"
+}
+
+### GET ALL
+
+GET http://localhost:3000/tasks/ HTTP/1.1
+content-type: application/json
+
+### GET ONE
+
+GET http://localhost:3000/tasks/bfcab04e-95d7-4e80-93b1-48a1ff6d84fc HTTP/1.1
+content-type: application/json
+
+### UPDATE ONE
+
+PUT http://localhost:3000/task/84396e73-5693-40f2-8c25-b5472af83ac9 HTTP/1.1
+content-type: application/json
+
+{
+    "title": "Update sample task 3",
+    "description": "This is the new value of the task 3",
+    "done": true
+}
+
+### DELETE ONE
+
+DELETE http://localhost:3000/task/84a9a7f0-f6ad-4c9e-bfd0-b9b701635e5b HTTP/1.1
+content-type: application/json

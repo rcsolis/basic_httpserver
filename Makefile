@@ -1,8 +1,9 @@
-BINARY_NAME_SERVER=server
+MAIN_FILE_NAME=main
+BINARY_NAME=server
 
 dev:
 	@echo "-->Run dev mode"
-	go run ./cmd/$(BINARY_NAME_SERVER).go
+	go run ./cmd/$(MAIN_FILE_NAME).go
 
 test:
 	echo "-->Run test"
@@ -25,8 +26,8 @@ dep: clean
 
 build: dep
 	@echo "==>Building binary"
-	go build -o bin/ -v ./cmd/server/$(BINARY_NAME_SERVER).go
+	go build -o bin/$(BINARY_NAME) -v ./cmd/$(MAIN_FILE_NAME).go
 
 run: build
 	@echo "==>Run binary"
-	./bin/$(BINARY_NAME_SERVER)
+	./bin/$(BINARY_NAME)
